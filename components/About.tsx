@@ -27,8 +27,8 @@ const About = () => {
         My skill set encompasses{" "}
         <span className="underline">HTML, CSS, JavaScript, and React,</span>{" "}
         along with various frontend technologies. My attention to detail shines
-        through in my work; I'm the kind of developer who can spend hours
-        perfecting every pixel to ensure pixel-perfect UIs. Now, I'm eager to
+        through in my work; I&apos;m the kind of developer who can spend hours
+        perfecting every pixel to ensure pixel-perfect UIs. Now, I&apos;m eager to
         take the next step and dive into a professional setting, working on
         real-world projects.{" "}
       </p>
