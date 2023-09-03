@@ -1,15 +1,30 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/store/active-context";
 
 const Intro = () => {
+  const { ref, inView } = useInView();
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection]);
+
   return (
-    <section className="mb-28 max-w-[50rem] text-center">
+    <section
+      ref={ref}
+      id="home"
+      className="mb-28 max-w-[50rem] text-center scroll-mt-52"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -47,7 +62,7 @@ const Intro = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <strong>Hello! I&apos;m Abhishek.</strong> I&apos;m a passionate{" "}
+        <strong>Hello! I&apos;m Abhishek.</strong> I&apos;m a{" "}
         <strong>Frontend Developer</strong>. I enjoy building <i>web apps</i>{" "}
         using different Frontend technologies like{" "}
         <span className="underline font-bold">React, Next.js,</span> etc.
@@ -63,7 +78,7 @@ const Intro = () => {
           className="bg-gray-900 group text-sm text-white px-5 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
         >
           Contact Me{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />{" "}
+          <BsArrowRight className="hidden sm:block opacity-70 group-hover:translate-x-1 transition" />{" "}
         </Link>
 
         <a
