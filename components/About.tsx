@@ -14,7 +14,7 @@ const About = () => {
     >
       <SectionHeading>About Me</SectionHeading>
       <p className="mb-3">
-        I'm on a passionate journey to become a{" "}
+        I&apos;m on a passionate journey to become a{" "}
         <strong>Frontend Developer</strong>. My academic background is in
         electronics and telecommunication engineering, but I have always been
         passionate about Computer Science. I found my way into web development
