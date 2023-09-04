@@ -6,6 +6,9 @@ const nextConfig = {
         hostname: 'i.imgur.com'
       }
     ]
+  },
+  experimental: {
+    serverActions: true
   }
 }
 

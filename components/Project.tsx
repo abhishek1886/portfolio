@@ -59,7 +59,7 @@ const Project = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-gray-100 p-5 relative overflow-hidden rounded-sm max-w-[42rem] w-full"
+        className="bg-gray-100 p-5 relative overflow-hidden  dark:bg-white/10 dark:hover:bg-white/20 rounded-sm max-w-[42rem] w-full"
       >
         <div
           className="z-50 transition duration-500 relative sm:h-[20rem] w-full
@@ -98,8 +98,8 @@ const Project = ({
         </div>
 
         <div className="sm:absolute group-odd:left-0 group-even:right-0 top-0 z-10 p-5  max-w-[21rem]">
-          <h3 className="text-black text-center text-[20px]">{title}</h3>
-          <p className="mt-2 text-black text-secondary text-[14px]">
+          <h3 className="text-black text-center text-[20px] dark:text-white">{title}</h3>
+          <p className="mt-2 text-black text-secondary text-[14px] dark:text-white">
             {description}
           </p>
         </div>

@@ -3,19 +3,11 @@
 import React, { useEffect } from "react";
 import SectionHeading from "./helpers/section-heading";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/store/active-context";
+import useSectionInView from "@/lib/hooks";
 
 const About = () => {
-  const { ref, inView } = useInView();
-  const { setActiveSection } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("About");
-    }
-  }, [inView, setActiveSection]);
-
+  const { ref } = useSectionInView("About");
+  
   return (
     <motion.section
       ref={ref}
@@ -26,7 +18,7 @@ const About = () => {
       transition={{ delay: 0.175 }}
     >
       <SectionHeading>About Me</SectionHeading>
-      <p className="mb-3">
+      <p className="mb-3 ">
         I&apos;m on a journey to become a <strong>Frontend Developer</strong>.
         My academic background is in electronics and telecommunication
         engineering, but I have always been passionate about Computer Science. I

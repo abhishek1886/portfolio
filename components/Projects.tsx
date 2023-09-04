@@ -5,19 +5,11 @@ import { motion } from "framer-motion";
 import SectionHeading from "./helpers/section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./Project";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/store/active-context";
+import useSectionInView from "@/lib/hooks";
 
 const Projects = () => {
-  const { ref, inView } = useInView();
-  const { setActiveSection } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Projects");
-    }
-  }, [inView, setActiveSection]);
-
+  const { ref } = useSectionInView("Projects", 0.2);
+  
   const titleVariant = {
     hidden: {
       y: 100,
@@ -39,7 +31,7 @@ const Projects = () => {
       variants={titleVariant}
       initial="hidden"
       animate="visible"
-      className="scroll-mt-28"
+      className="scroll-mt-28 mb-28"
     >
       <SectionHeading>My Projects</SectionHeading>
 

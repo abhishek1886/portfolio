@@ -1,23 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/store/active-context";
+import useSectionInView from "@/lib/hooks";
 
 const Intro = () => {
-  const { ref, inView } = useInView();
-  const { setActiveSection } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView("Home", 0.5);
 
   return (
     <section
@@ -84,27 +76,30 @@ const Intro = () => {
         <a
           href="/Abhishek_Gupta_Resume.pdf"
           download
-          className="bg-white text-sm px-5 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition border border-black/10"
+          className="bg-white text-sm px-5 py-2 flex items-center gap-2 rounded-full 
+            outline-none focus:scale-110 hover:scale-110 active:scale-105 transition 
+            border border-black/10 dark:bg-white/10"
         >
           Download CV
           <HiDownload className="opacity-70" />
         </a>
 
-        <a
-          href=""
-          target="_blank"
-          className="bg-white text-sm p-3 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition border border-black/10"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
-          href=""
-          target="_blank"
-          className="bg-white p-2 text-gray-700  flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition border border-black/10"
-        >
-          <BsGithub />
-        </a>
+        <div className="flex gap-2">
+          <a
+            href="https://www.linkedin.com/in/abhishek-gupta-0221901b7"
+            target="_blank"
+            className="bg-white text-sm p-3 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition border border-black/10 dark:bg-white/10 dark:text-white/60"
+          >
+            <BsLinkedin />
+          </a>
+          <a
+            href="https://github.com/abhishek1886/"
+            target="_blank"
+            className="bg-white p-2 text-gray-700  flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition border border-black/10 dark:bg-white/10 dark:text-white/60"
+          >
+            <BsGithub />
+          </a>
+        </div>
       </motion.div>
     </section>
   );
