@@ -6,6 +6,7 @@ import { projectsData } from "@/lib/data";
 import { Tilt } from "react-tilt";
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
+import { BiLinkExternal } from "react-icons/bi"
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -17,6 +18,7 @@ const Project = ({
   mobileImg,
   index,
   source_code_link,
+  website_link
 }: ProjectProps) => {
 
   const ref = useRef<HTMLDivElement>(null);
@@ -69,20 +71,28 @@ const Project = ({
             group-hover:group-even:rotate-2
             group-hover:group-odd:-rotate-2"
         >
-          <Image
+          {imageUrl && <Image
             src={imageUrl}
             alt={title}
             className=" object-cover shadow-2xl rounded-sm"
-          />
+          />}
 
-          <div className="absolute top-0 group-even:right-0 transition flex justify-end m-3">
+          {source_code_link && <div className="absolute top-0 group-even:right-0 transition flex justify-end m-3">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <BsGithub className="w-1/2 h-1/2 text-white object-contain hover:scale-110 active:scale-105" />
             </div>
-          </div>
+          </div>}
+          {website_link && <div className="absolute top-11 group-even:right-0 transition flex justify-end m-3">
+            <div
+              onClick={() => window.open(website_link, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+            >
+              <BiLinkExternal className="w-1/2 h-1/2 text-white object-contain hover:scale-110 active:scale-105" />
+            </div>
+          </div>}
         </div>
 
         <div className="absolute top-10 hidden sm:block group-odd:right-48 group-even:left-48">

@@ -19,10 +19,8 @@ const About = () => {
     >
       <SectionHeading>About Me</SectionHeading>
       <p className="mb-3 ">
-        I&apos;m on a journey to become a <strong>Frontend Developer</strong>.
-        My academic background is in electronics and telecommunication
-        engineering, but I have always been passionate about Computer Science. I
-        found my way into web development through an online community. It was
+        I&apos;m a <strong>Frontend Developer</strong>.
+        I found my way into web development through an online community. It was
         here that I discovered my love for creating web applications that not
         only look great but also provide users with a seamless and enjoyable
         experience. <i>My favourite part of programming</i> is problem-solving
@@ -30,7 +28,7 @@ const About = () => {
       </p>
       <p>
         My skill set encompasses{" "}
-        <span className="underline">HTML, CSS, JavaScript, and React,</span>{" "}
+        <span className="underline">HTML, CSS, JavaScript, and React, Next.js</span>{" "}
         along with various frontend technologies. My attention to detail shines
         through in my work; I&apos;m the kind of developer who can spend hours
         perfecting every pixel to ensure pixel-perfect UIs. Now, I&apos;m eager

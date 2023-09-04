@@ -4,6 +4,8 @@ import mailbox from "@/public/mailbox-client-full.png";
 import mailboxMobile from "@/public/mailbox-mobile.png";
 import pokedex from "@/public/pokedex-full.png";
 import pokedexMobile from "@/public/pokedex-mobile.png"
+import MALApp from "@/public/MAL-app.png";
+import MALMobile from "@/public/MAL-mobile.png";
 
 export const links = [
   {
@@ -31,43 +33,58 @@ export const links = [
 export const projectsData = [
   {
     index: 1,
-    title: "CorpComment",
+    title: "Pokedex",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: ecommerce,
-    mobileImg: "",
-    source_code_link: ''
+      "An interactive app/game to catch and learn interesting information about different pokemons.",
+    tags: ["React", "Poke API", "Firebase", "Tailwind", "Context API"],
+    imageUrl: pokedex,
+    mobileImg: pokedexMobile,
+    source_code_link: 'https://github.com/abhishek1886/pokedex',
+    website_link: 'https://pokedex-abhishek1886.vercel.app/'
   },
   {
     index: 2,
-    title: "rmtDev",
+    title: "MAL Playlist",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: mailbox,
-    mobileImg: mailboxMobile,
-    source_code_link: ''
+      "An App to access user's Youtube and MyAnimeList account using OAuth 2.0 authentication and create Youtube playlist of opening themes of user's watched animelist.",
+    tags: ["Next.js", "OAuth 2.0", "Youtube API", "MyAnimeList API", "Tailwind"],
+    imageUrl: MALApp,
+    mobileImg: MALMobile,
+    source_code_link: '',
+    website_link: ''
   },
   {
     index: 3,
-    title: "Word Analytics",
+    title: "Mail Box Client",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: pokedex,
-    mobileImg: pokedexMobile,
-    source_code_link: ''
+      "An App to send and recieve mails in realtime.",
+    tags: ["React", "Redux", "Redux Toolkit", "React Bootstrap", "Custom Hooks", ],
+    imageUrl: mailbox,
+    mobileImg: mailboxMobile,
+    source_code_link: 'https://github.com/abhishek1886/mail-box-client',
+    website_link: 'https://mail-box-client-six.vercel.app/'
   },
   {
     index: 4,
-    title: "Word Analytics",
+    title: "Ecomerce Website",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: pokedex,
-    mobileImg: pokedexMobile,
-    source_code_link: ''
+      "An ecommerce website to to sell band masic, display tours schedule and band information.",
+    tags: ["React", "Redux", "Redux Toolkit", "React Bootstrap"],
+    imageUrl: ecommerce,
+    mobileImg: '',
+    source_code_link: 'https://github.com/abhishek1886/ecommerce',
+    website_link: ''
+  },
+{
+    index: 5,
+    title: "Expense Tracker",
+    description:
+      "a feature rich app to facilitate seamless tracking experience to users.",
+    tags: ["React", "Redux", "Redux Toolkit", "React Bootstrap", "Firebase authentication"],
+    imageUrl: '',
+    mobileImg: '',
+    source_code_link: '',
+    website_link: ''
   },
 ] as const;
 
@@ -75,20 +92,22 @@ export const skillsData = [
   "HTML",
   "CSS",
   "JavaScript",
+  "C++",
   "TypeScript",
   "React",
   "Next.js",
-  "Node.js",
-  "Git",
+  "Redux",
+  "Bootstrap",
   "Tailwind",
-  "Prisma",
+  "Firebase",
   "MongoDB",
   "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
+  "Redux Toolkit",
+  "Context API",
+  "REST API",
+  "OAuth 2.0, JWT",
+  "Git",
+  "Postman",
+  "Webpack",
   "Framer Motion",
 ] as const;
