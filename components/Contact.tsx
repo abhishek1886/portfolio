@@ -51,7 +51,7 @@ const Contact = () => {
         />
         <textarea
           className="h-52 my-3 rounded-lg border border-black/10 p-4 dark:text-gray-950 dark:bg-gray-500 dark:focus:bg-white"
-          placeholder="Your message..."
+          placeholder="Your message"
           required
           name="message"
         />
