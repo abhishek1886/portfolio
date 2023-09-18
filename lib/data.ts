@@ -50,8 +50,8 @@ export const projectsData = [
     tags: ["Next.js", "OAuth 2.0", "Youtube API", "MyAnimeList API", "Tailwind"],
     imageUrl: MALApp,
     mobileImg: MALMobile,
-    source_code_link: '',
-    website_link: ''
+    source_code_link: 'https://github.com/abhishek1886/MAL-App',
+    website_link: 'https://www.youtube.com/playlist?list=PLcqdV5yxw0l8PzaUlSKl79jyft3OZlnoo'
   },
   {
     index: 3,
