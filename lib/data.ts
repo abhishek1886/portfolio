@@ -6,6 +6,8 @@ import pokedex from "@/public/pokedex-full.png";
 import pokedexMobile from "@/public/pokedex-mobile.png"
 import MALApp from "@/public/MAL-app.png";
 import MALMobile from "@/public/MAL-mobile.png";
+import ExpenseTracker from "@/public/expense-full.png";
+import ExpenseMobile from "@/public/expense-mobile.png";
 
 export const links = [
   {
@@ -81,10 +83,10 @@ export const projectsData = [
     description:
       "a feature rich app to facilitate seamless tracking experience to users.",
     tags: ["React", "Redux", "Redux Toolkit", "React Bootstrap", "Firebase authentication"],
-    imageUrl: '',
-    mobileImg: '',
-    source_code_link: '',
-    website_link: ''
+    imageUrl: ExpenseTracker,
+    mobileImg: ExpenseMobile,
+    source_code_link: 'https://github.com/abhishek1886/expense-tracker-app',
+    website_link: 'https://expense-tracker-jc32bgr8k-abhishek1886.vercel.app/'
   },
 ] as const;
 
